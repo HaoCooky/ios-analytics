@@ -7,18 +7,18 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'DIAnalyticsSDK'
-  s.version          = '0.1.2'
-  s.summary          = 'DI Analytics SDK for iOS.'
+  s.name             = 'CookyAnalyticsSDK'
+  s.version          = '0.1.0'
+  s.summary          = 'Cooky Analytics SDK for iOS.'
 
   s.description      = <<-DESC
-  Data Insider Analytics SDK for IOS
+  Cooky Analytics SDK for IOS
                        DESC
 
-  s.homepage         = 'https://gitlab.com/liemvouy/di-ios-analytics'
+  s.homepage         = 'https://github.com/HaoCooky/ios-analytics'
   s.license          = { :type => 'CC BY 4.0', :file => 'LICENSE' }
-  s.author           = { 'liemvu' => 'liemvouy@gmail.com' }
-  s.source           = { :git => 'https://gitlab.com/liemvouy/di-ios-analytics.git', :tag => s.version.to_s }
+  s.author           = { 'haonn' => 'haonguyennhat97@gmail.com' }
+  s.source           = { :git => 'https://github.com/HaoCooky/ios-analytics.git', :tag => s.version.to_s }
   
 
   s.ios.deployment_target = '9.0'
