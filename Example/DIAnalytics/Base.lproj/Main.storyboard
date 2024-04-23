@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ync-qg-t99">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="DIAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r3I-yL-TcT">
+                                <rect key="frame" x="0.0" y="258.5" width="375" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-Ls-6Mx">
+                                        <rect key="frame" x="143.5" y="0.0" width="88" height="30"/>
+                                        <state key="normal" title="Log an event"/>
+                                        <connections>
+                                            <action selector="logEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xds-Xc-uwP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXS-f2-tNj">
+                                        <rect key="frame" x="116" y="30" width="143" height="30"/>
+                                        <state key="normal" title="Start auto log events"/>
+                                        <connections>
+                                            <action selector="autoLogEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fJK-kU-MAF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-8v-fA3">
+                                        <rect key="frame" x="157" y="60" width="61" height="30"/>
+                                        <state key="normal" title="Dispatch"/>
+                                        <connections>
+                                            <action selector="dispatchNow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S6v-Qp-Q47"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96n-1w-JaB">
+                                        <rect key="frame" x="168" y="90" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="reset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oeb-kZ-wHE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-RL-Qnc">
+                                        <rect key="frame" x="163.5" y="120" width="48" height="30"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="logout:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ota-i8-b31"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r3I-yL-TcT" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="If5-08-iWu"/>
+                            <constraint firstItem="r3I-yL-TcT" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="Qem-78-t8J"/>
+                            <constraint firstItem="r3I-yL-TcT" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wXM-Ga-XcF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rht-Py-K17"/>
+                    <connections>
+                        <outlet property="autoLogEventButton" destination="xXS-f2-tNj" id="8a4-RZ-biu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184.8" y="-564.46776611694156"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="4iH-pN-ZUu">
+            <objects>
+                <viewController interfaceStyle="light" id="atV-qQ-9ak" customClass="LoginViewController" customModule="DIAnalytics_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8T-zN-zaM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pvk-aw-urE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Koe-ib-BU9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-1D-bau">
+                                <rect key="frame" x="0.0" y="303.5" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-I4-pJc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="Log an event"/>
+                                        <connections>
+                                            <action selector="logEvent:" destination="atV-qQ-9ak" eventType="touchUpInside" id="R85-vt-ChK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zME-Gp-Aya">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="login:" destination="atV-qQ-9ak" eventType="touchUpInside" id="62A-XF-C8M"/>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="fFg-aj-tlV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l1x-1D-bau" firstAttribute="centerX" secondItem="Koe-ib-BU9" secondAttribute="centerX" id="UKK-Rh-kAf"/>
+                            <constraint firstItem="l1x-1D-bau" firstAttribute="width" secondItem="Koe-ib-BU9" secondAttribute="width" id="q0U-da-5At"/>
+                            <constraint firstItem="l1x-1D-bau" firstAttribute="centerY" secondItem="Koe-ib-BU9" secondAttribute="centerY" id="vwd-cr-820"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lIQ-IE-t9H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLn-NH-RBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CK3-2l-TCw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" navigationBarHidden="YES" id="Ync-qg-t99" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WNg-7c-2wr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="atV-qQ-9ak" kind="relationship" relationship="rootViewController" id="8Ri-N2-hhF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SW1-kZ-Wm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551.20000000000005" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

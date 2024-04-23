@@ -1,0 +1,14 @@
+
+## 0.1.2
+- Support Flutter SDK
+
+## 0.1.1
+- Add trackingUrl config
+
+## 0.1.0
+- Add event
+- Add user information
+- Shared properties for all events
+- Auto session managing
+- Submit events by batch
+

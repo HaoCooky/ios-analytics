@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'DIAnalytics_Example' do
+  pod 'DIAnalyticsSDK', :path => '../', :testspecs => ['Tests']
+  pod 'Firebase/Analytics'
+  
+
+  target 'DIAnalytics_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
