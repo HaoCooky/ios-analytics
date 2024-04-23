@@ -1,5 +1,5 @@
 import XCTest
-@testable import DIAnalyticsSDK
+@testable import CookyAnalytics
 
 class DITests: XCTestCase {
   var urlSessionFactory: MockURLSessionFactory!

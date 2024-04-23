@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CookyAnalyticsSDK'
+  s.name             = 'CookyAnalytics'
   s.version          = '0.1.0'
   s.summary          = 'Cooky Analytics SDK for iOS.'
 
@@ -23,11 +23,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'DIAnalytics/Classes/**/*.{h,m,swift}'
+  s.source_files = 'CookyAnalytics/Classes/**/*.{h,m,swift}'
   s.swift_versions = ['4.2', '5.0']
   s.framework        = 'SystemConfiguration', 'CoreTelephony'
   
   s.test_spec 'Tests' do |test_spec|
-    test_spec.source_files = 'DIAnalytics/Tests/**/*.{swift}'
+    test_spec.source_files = 'CookyAnalytics/Tests/**/*.{swift}'
   end
 end
