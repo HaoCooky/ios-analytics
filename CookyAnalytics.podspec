@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CookyAnalytics'
   s.version          = '0.1.0'
-  s.summary          = 'Cooky Analytics SDK for iOS.'
+  s.summary          = 'Cooky Analytics SDK for iOS test test.'
 
   s.description      = <<-DESC
   Cooky Analytics SDK for IOS
